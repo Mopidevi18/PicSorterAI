@@ -65,53 +65,44 @@ The project consists of several interconnected components that handle image uplo
 ## Usage
 Follow the steps below to run the application:
 
-### 1. **Run Redis:**
+### 1. **Create Docker images and starts the services:**
 
 - Using Docker:
   ```bash
-  docker run -d --name redis-stack -p 6379:6379 --net test-nw redis/redis-stack:latest
+  docker-compose up --build
   ```
-- Using Kubernetes:
+
+### 2. **Using Kubernetes:**
+
+- Deploy Redis:
   ```bash
   kubectl apply -f redis-deployment.yaml
-  kubectl apply -f redis-service.yaml
   ```
 
-### 2. **Run the Face Matching Server:**
-
-- Using Docker:
+- Deploy Python Service:
   ```bash
-  docker run --name face_matching_server -p 5001:5001 --net test-nw your-docker-image:latest
+  kubectl apply -f python-deployment.yaml
   ```
-- Using Kubernetes:
+- Deploy Backend:
   ```bash
-  kubectl apply -f face-matching-deployment.yaml
-  kubectl apply -f face-matching-service.yaml
+  kubectl apply -f backend-deployment.yaml
   ```
-
-### 3. **Run the Frontend Server:**
-
-- Using Docker:
-  ```bash
-  docker run --name frontend_server -p 5000:5000 --net test-nw your-docker-image:latest
-  ```
-- Using Kubernetes:
+- Deploy Frontend:
   ```bash
   kubectl apply -f frontend-deployment.yaml
-  kubectl apply -f frontend-service.yaml
   ```
 
-### 4. **Access the Application:**
+### 3. **Access the Application:**
 
-- Open your browser and go to [http://localhost:5000](http://localhost:5000) (or the Kubernetes-assigned port).
+- Open your browser and go to [http://localhost:3000](http://localhost:3000) (or the Kubernetes-assigned port).
 
-### 5. **Upload and Process Images:**
+### 4. **Upload and Process Images:**
 
 - Click on **"Choose File"** to upload an image.
 - Click **"Upload"** to process the image and view results.
 - Use the dropdown menu to select from recent uploads.
 
-### 6. **View Results:**
+### 5. **View Results:**
 
 - Processed images and matching results are displayed on the web interface.
 
