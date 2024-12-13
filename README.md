@@ -4,7 +4,7 @@ Face Recognition and Matching System is a web application designed to streamline
 
 ## Team Members:
 - Tarun Kumar Nagelli
-- [Add team members if applicable]
+- Venkateshwarlu Mopidevi
 
 ## Table of Contents
 1. Requirements
