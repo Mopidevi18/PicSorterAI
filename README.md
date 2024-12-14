@@ -18,17 +18,12 @@ Face Recognition and Matching System is a web application designed to streamline
 ## Requirements
 Ensure the following dependencies are installed:
 
-- `opencv-python==4.8.1.78`
-- `torchvision==0.16.1`
-- `Flask==3.0.0`
-- `Pillow==10.1.0`
-- `pickle-mixin==1.0.2`
-- `flask-cors==4.0.0`
-- `pymongo==4.6.0`
-- `Jinja2==3.1.2`
-- `Flask-PyMongo==2.3.0`
-- `jsonpickle==3.0.2`
-- `redis==5.0.1`
+- `google-cloud==0.34.0`
+- `google-cloud-storage==2.8.0`
+- `scipy==1.11.3`
+- `face_recognition==1.3.0`
+- `numpy==1.24.3`
+- `requests==2.31.0`
 
 ## Installation
 To install required libraries:
